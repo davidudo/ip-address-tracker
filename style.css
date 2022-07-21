@@ -41,6 +41,7 @@ main header {
 
 main header {
   background-image: url("images/pattern-bg.png");
+  background-repeat: no-repeat;
 }
 
 main h1 {
