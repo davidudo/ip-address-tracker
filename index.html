@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css" integrity="sha512-hoalWLoI8r4UszCkZ5kL8vayOGVae1oxXe/2A4AO6J9+580uKHDO3JdHb7NzwwzK5xr/Fs0W40kiNHxM9vyTtQ==" crossorigin="" />
+
+  <title>Frontend Mentor | IP Address Tracker</title>
+
+</head>
+
+<body>
+  <main>
+    <!-- Search Section -->
+    <header>
+      <h1>IP Address Tracker</h1>
+
+      <section class="form-group">
+        <input type="text" placeholder="Search for any IP address or domain" id="user-input" />
+        <button id="button">
+          <img src="images/icon-arrow.svg" alt="Arrow Icon">
+        </button>
+      </section>
+
+      <!-- Client Details Display Section -->
+
+      <section>
+        <div>
+          <h2>IP ADDRESS</h2>
+          <p id="ip-address">192.212.174.101</p>
+        </div>
+        <div>
+          <h2>LOCATION</h2>
+          <p id="location">Brookyln, NY 10001</p>
+        </div>
+        <div>
+          <h2>TIMEZONE</h2>
+          <p id="timezone">UTC -05:00</p>
+        </div>
+        <div>
+          <h2>ISP</h2>
+          <p id="isp">SpaceX Starlink</p>
+        </div>
+      </section>
+    </header>
+
+    <!-- Map Display Section -->
+    <section id="map" class="map-display"></section>
+  </main>
+
+  <script src="https://unpkg.com/leaflet@1.8.0/dist/leaflet.js" integrity="sha512-BB3hKbKWOc9Ez/TAwyWxNXeoV9c1v6FIeYiBieIWkpLjauysF18NzgR1MBNBXf8/KABdlkX68nAhlwcDFLGPCQ==" crossorigin=""></script>
+  <script src="main.js"></script>
+</body>
+
+</html>

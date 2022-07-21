@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap');
+
+:root {
+  /* === Colours === */
+  --very-dark-gray: hsl(0, 0%, 17%);
+  --dark-gray: hsl(0, 0%, 59%);
+}
+
+/* === General Styling === */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Rubik', sans-serif;
+}
+
+input {
+  font-size: 18px;
+}
+
+main {
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+}
+
+/* === Search Section === */
+
+main header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 3rem 1rem 0rem 1rem;
+  width: 100%;
+}
+
+main header {
+  background-image: url("images/pattern-bg.png");
+}
+
+main h1 {
+  color: #FFF;
+  margin-bottom: 2rem;
+}
+
+main .form-group {
+  width: 100%;
+  display: flex;
+  align-self: center;
+  justify-content: center;
+}
+
+main .form-group input {
+  padding: 1rem;
+  width: 500px;
+  border: none;
+  border-radius: 10px 0 0 10px;
+}
+
+main .form-group button {
+  background-color: #000;
+  border: none;
+  padding: 1rem;
+  border-radius: 0 10px 10px 0;
+  cursor: pointer;
+}
+
+main .form-group button:hover {
+  background-color: var(--very-dark-gray);
+}
+
+/* === Client Details Display Section === */
+
+main>header>section:nth-of-type(2) {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  position: relative;
+  background-color: #FFF;
+  z-index: 10;
+  padding: 1.5rem 1rem;
+  margin: 3rem 2rem -3rem 2rem;
+  border-radius: 13px;
+  box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}
+
+main>header>section>div {
+  min-width: 200px;
+  border-left: 1px solid var(--dark-gray);
+  padding: 0 1.5rem;
+}
+
+main>header>section>div:nth-of-type(1) {
+  border: none;
+}
+
+main>header>section>div h2 {
+  font-size: 0.7rem;
+  font-weight: 400;
+  letter-spacing: 1px;
+  color: var(--very-dark-gray);
+  margin-bottom: 0.5rem;
+}
+
+main>header>section>div p {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: var(--very-dark-gray);
+  max-width: 120px;
+  text-wrap: wrap;
+}
+
+/* === Map Display === */
+
+main>section:nth-of-type(1) {
+  width: 100%;
+  height: 90%;
+  z-index: 0;
+}
+
+/* === Mobile Phone Responsiveness === */
+
+@media only screen and (max-width: 768px) {
+  main h1 {
+    margin-bottom: 1.5rem;
+  }
+
+  main .form-group {
+    width: 80vw;
+  }
+
+  main>header>section:nth-of-type(2) {
+    flex-direction: column;
+    text-align: center;
+    width: 80vw;
+    margin-top: 2rem;
+    margin-bottom: -8rem;
+  }
+
+  main>header>section>div {
+    border: none;
+    margin-bottom: 1.1rem;
+  }
+
+  main>header>section>div p {
+    max-width: 100%;
+  }
+}
