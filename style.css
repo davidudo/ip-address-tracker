@@ -111,7 +111,7 @@ main>header>section>div h2 {
 }
 
 main>header>section>div p {
-  font-size: 1.4rem;
+  font-size: 1.1rem;
   font-weight: 600;
   color: var(--very-dark-gray);
   max-width: 100px;
@@ -130,6 +130,10 @@ main>section:nth-of-type(1) {
 /* === Mobile Phone Responsiveness === */
 
 @media only screen and (max-width: 800px) {
+  main header {
+    padding-top: 1rem;
+  }
+  
   main h1 {
     margin-bottom: 1.5rem;
   }
@@ -142,6 +146,7 @@ main>section:nth-of-type(1) {
     flex-direction: column;
     text-align: center;
     width: 80vw;
+    top: 9rem;
   }
 
   main>header>section>div {
