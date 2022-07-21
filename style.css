@@ -114,7 +114,7 @@ main>header>section>div p {
   font-size: 1.4rem;
   font-weight: 600;
   color: var(--very-dark-gray);
-  max-width: 140px;
+  max-width: 180px;
   max-height: 60px;
   overflow-y: scroll;
 }
