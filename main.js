@@ -52,20 +52,20 @@ function getLocation(latitude, longitude) {
 // Function to get IP address info and display it
 function getAndDisplayInfo() {
   let ip_address = user_input.value;
-  let url = `https://geo.ipify.org/api/v2/country,city?apiKey=at_RUQIhBAq2VXQrToyql3fKxa2olw3B&ipAddress=${ip_address}`;
+  let url = `https://ipapi.co/${ip_address}/json`;
 
   getAddress(url)
     .then((result) => {
       // console.log(result);
       
       const ip_addr = result.ip;
-      const country = result.location.country;
-      const city = result.location.city;
-      const postal_code = result.location.postalCode;
-      const timezone = result.location.timezone;
-      const isp = result.isp;
-      const latitude = result.location.lat;
-      const longitude = result.location.lng;
+      const country = result.country_name;
+      const city = result.region;
+      const postal_code = result.postal || "";
+      const timezone = result.utc_offset;
+      const isp = result.org;
+      const latitude = result.latitude;
+      const longitude = result.longitude;
 
       ip_address_display.innerHTML = ip_addr;
       location_display.innerHTML = `${city}, ${country} ${postal_code}`;
